@@ -16,7 +16,7 @@ import java.util.ArrayList;
 263 (increased)
  */
 
-public class main {
+public class adventD1 {
     public static void main(String[] args) {                        // main method
         ArrayList<Integer> numbers = new ArrayList<Integer>();      // creates an ArrayList to store the given Depth Values
         numbers.add(199);  // N/A - no previous                     // list of depth values to be added to the numbers ArrayList
