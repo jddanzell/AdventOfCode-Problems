@@ -17,6 +17,7 @@ import java.util.Scanner;
  * Account for edge cases
  *  Negative inputs, invalid inputs, input type errors, etc.
  * 
+ * Fix comment formatting, VSCode does not match GitHub formatting
  * 
  * 
  */
@@ -92,7 +93,7 @@ public class adventD2 {
 
     }
 
-    
+
 
     public static int forward(int input, int horizontal) {        // forward method
         int newHorizontal = 0;                                    // creates new int to store the new horizontal position after the method is ran
