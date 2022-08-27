@@ -3,6 +3,13 @@ import java.util.ArrayList;
 // Joshua Danzell
 // Advent of Code Day 1 Program - Solved
 
+/* Utilized:
+ * ArrayList
+ * 
+ * 
+ * 
+ */
+
 /*  Given Values
 199 (N/A - no previous measurement)
 200 (increased)
