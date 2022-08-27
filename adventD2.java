@@ -92,6 +92,7 @@ public class adventD2 {
 
     }
 
+    
 
     public static int forward(int input, int horizontal) {        // forward method
         int newHorizontal = 0;                                    // creates new int to store the new horizontal position after the method is ran
