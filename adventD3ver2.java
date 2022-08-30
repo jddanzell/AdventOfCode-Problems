@@ -22,40 +22,37 @@ import java.util.ArrayList;
  * 
 */
 
-public class adventD3 {
+public class adventD3ver2 {
     public static void main(String[] args) {                         // main method
 
         int finalNumber = 0;
 
-        ArrayList<Integer> finalBinary = new ArrayList<Integer>();
 
         ArrayList<Integer> binaries = new ArrayList<Integer>();      // creates an ArrayList to store the given Binary Values
-        binaries.add(1001001); //64
-        binaries.add(1111101); 
-        binaries.add(1101101);
-        binaries.add(1101111);
-        binaries.add(1101011);
-        binaries.add(1011111); //585
-        binaries.add(1001111); //73
-        binaries.add(1111001);
-        binaries.add(1100001);
-        binaries.add(1110011);
-        binaries.add(1000101); //8
-        binaries.add(1010101); //520
+        binaries.add(00100); //64
+        binaries.add(11110); 
+        binaries.add(10110);
+        binaries.add(10111);
+        binaries.add(10101);
+        binaries.add(01111); //585
+        binaries.add(00111); //73
+        binaries.add(11100);
+        binaries.add(10000);
+        binaries.add(11001);
+        binaries.add(00010); //8
+        binaries.add(01010); //520
 
-        
+        System.out.println(00100);
+
         System.out.println(binaries);
         
-        System.out.println(frequencyCounter(binaries, finalBinary));
-
-        System.out.println(finalBinary);
-
+        System.out.println(frequencyCounter(binaries));
 
        
 
     }
 
-    public static int frequencyCounter(ArrayList<Integer> binaries, ArrayList<Integer> finalBinary) {
+    public static int frequencyCounter(ArrayList<Integer> binaries) {
 
                 int oneCounter = 0;
                 int zeroCounter = 0;
@@ -63,23 +60,26 @@ public class adventD3 {
                 int totalOneCounter = 0;
                 int totalZeroCounter = 0;
 
-                int substringOne = 1;
-                int substringTwo = 2;
+                int substringOne = 0;
+                int substringTwo = 1;
 
                 int firstDigit = 0;
-                int finalCounter = 0;
 
 
-
-
-                for (int i = 1; i < 6; i++) {
+                for (int i = 0; i < 5; i++) {
 
                     for (int j = 0; j < binaries.size(); j++) {
           
                         int numberPassedIn = binaries.get(j);
-    
-                        firstDigit = Integer.parseInt(Integer.toString(numberPassedIn).substring(substringOne, substringTwo));
-                                  
+                        String s = Integer.toString(binaries.get(j));  
+
+                        if (s.length() < 5) {
+                            zeroCounter++;
+                        } else {
+                            firstDigit = Integer.parseInt(Integer.toString(numberPassedIn).substring(substringOne, substringTwo));
+                        }
+
+                                                          
                         if (firstDigit == 1) {
                             oneCounter++;
                         } else {
@@ -87,16 +87,10 @@ public class adventD3 {
                         }                  
             
                     }
-
                     if (oneCounter > zeroCounter) {
                         totalOneCounter++;
-                        finalBinary.add(1);
-                    }
-                    
-                    else {
+                    } else {
                         totalZeroCounter++;
-                        finalBinary.add(0);
-
                     }
                     
                     substringOne++;
@@ -109,9 +103,13 @@ public class adventD3 {
 
            return totalOneCounter;
     }
-
-
     
+    public static int finalFrequencyCalculator(ArrayList<Integer> binaries) {
+        int returnValue = 0;
+
+        
+        return returnValue;
+    }
 }
 
 
